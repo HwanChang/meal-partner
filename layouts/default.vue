@@ -9,11 +9,16 @@
       <v-container fluid grid-list-md mt-4>
         <v-layout v-if="!$vuetify.breakpoint.xs && !$vuetify.breakpoint.sm">
           <v-flex row md3 lg3 xl4>
-            <v-img
-              :src="require('@/static/logo.png')"
-              max-width="150px"
-              max-height="35px"
-            />
+            <router-link
+              to="/"
+            >
+              <v-img
+                :src="require('@/static/logo.png')"
+                max-width="150px"
+                max-height="40px"
+              />
+            </router-link>
+            <v-spacer />
           </v-flex>
           <v-flex md5 lg4 xl3>
             <v-text-field
@@ -41,11 +46,15 @@
         </v-layout>
         <v-layout v-else>
           <v-flex xs10>
-            <v-img
-              :src="require('@/static/logo.png')"
-              max-width="150px"
-              max-height="35px"
-            />
+            <router-link
+              to="/"
+            >
+              <v-img
+                :src="require('@/static/logo.png')"
+                max-width="150px"
+                max-height="40px"
+              />
+            </router-link>
           </v-flex>
           <v-flex xs1 mr-5>
             <v-btn icon>
