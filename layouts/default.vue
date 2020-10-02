@@ -6,16 +6,16 @@
       flat
       color="white"
     >
-      <v-container fluid grid-list-md>
-        <v-layout v-if="!$vuetify.breakpoint.xs">
-          <v-flex sm2 md2>
+      <v-container fluid grid-list-md mt-4>
+        <v-layout v-if="!$vuetify.breakpoint.xs && !$vuetify.breakpoint.sm">
+          <v-flex row md3 lg3 xl4>
             <v-img
               :src="require('@/static/logo.png')"
               max-width="150px"
               max-height="35px"
             />
           </v-flex>
-          <v-flex sm4 md4>
+          <v-flex md5 lg4 xl3>
             <v-text-field
               label="지역명 혹은 식당을 검색하세요!"
               outlined
@@ -27,13 +27,12 @@
               @keyup.enter="searchClick"
             />
           </v-flex>
-          <v-flex sm6 md6>
+          <v-flex md4 lg5 xl5>
             <v-btn
               v-for="(menu, i) in menuItems"
               :key="i"
               :to="menu.to"
               active-class="no-active"
-              color="primary"
               text
             >
               {{ menu.title }}
@@ -41,7 +40,7 @@
           </v-flex>
         </v-layout>
         <v-layout v-else>
-          <v-flex xs9>
+          <v-flex xs10>
             <v-img
               :src="require('@/static/logo.png')"
               max-width="150px"
