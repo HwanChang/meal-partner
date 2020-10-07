@@ -7,7 +7,7 @@
       color="white"
     >
       <v-container fluid grid-list-md mt-4>
-        <v-layout v-if="!$vuetify.breakpoint.xs && !$vuetify.breakpoint.sm">
+        <v-layout v-if="$vuetify.breakpoint.mdAndUp">
           <v-flex row md3 lg3 xl4>
             <router-link
               to="/"
