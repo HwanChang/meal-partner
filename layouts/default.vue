@@ -13,7 +13,7 @@
               to="/"
             >
               <v-img
-                :src="require('@/static/logo.png')"
+                :src="require('@/static/logo.svg')"
                 max-width="150px"
                 max-height="40px"
               />
@@ -50,7 +50,7 @@
               to="/"
             >
               <v-img
-                :src="require('@/static/logo.png')"
+                :src="require('@/static/logo.svg')"
                 max-width="150px"
                 max-height="40px"
               />
