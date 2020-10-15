@@ -135,6 +135,10 @@ export default {
         {
           title: '홈',
           to: '/'
+        },
+        {
+          title: '식사등록',
+          to: '/meal'
         }
       ],
       title: '식사파트너'
