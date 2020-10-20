@@ -16,6 +16,11 @@ export default {
         type: 'font/woff',
         href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700'
       }
+    ],
+    script: [
+      {
+        src: '//dapi.kakao.com/v2/maps/sdk.js?appkey=' + process.env.KAKAO_MAP_APIKEY + '&libraries=services,clusterer'
+      }
     ]
   },
 
@@ -23,6 +28,7 @@ export default {
   ],
 
   plugins: [
+    '@/plugins/kakaomap.js'
   ],
 
   components: true,
