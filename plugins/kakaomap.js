@@ -7,11 +7,13 @@ export function searchAddrFromCoords (coords, callback) {
 export function displayCenterInfo (result, status) {
   if (status === kakao.maps.services.Status.OK) {
     const infoDiv = document.getElementById('centerAddr')
-    for (let i = 0; i < result.length; i++) {
-      if (result[i].region_type === 'H') {
-        infoDiv.innerHTML = result[i].address_name
-        break
+    result.some((value, index) => {
+      if (value.region_type === 'H') {
+        infoDiv.innerHTML = value.address_name
+        return true
+      } else {
+        return false
       }
-    }
+    })
   }
 }
