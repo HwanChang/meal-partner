@@ -24,7 +24,7 @@ export default {
     }
     const map = new kakao.maps.Map(mapContainer, mapOption)
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
+      navigator.geolocation.getCurrentPosition((position) => {
         const lat = position.coords.latitude
         const lon = position.coords.longitude
         const locPosition = new kakao.maps.LatLng(lat, lon)
@@ -34,7 +34,7 @@ export default {
       const locPosition = new kakao.maps.LatLng(33.450701, 126.570667)
       map.setCenter(locPosition)
     }
-    kakao.maps.event.addListener(map, 'idle', function () {
+    kakao.maps.event.addListener(map, 'idle', () => {
       searchAddrFromCoords(map.getCenter(), displayCenterInfo)
     })
   }
