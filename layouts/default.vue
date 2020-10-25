@@ -22,6 +22,7 @@
           </v-flex>
           <v-flex md5 lg4 xl3>
             <v-text-field
+              v-model="restaurantName"
               label="지역명 혹은 식당을 검색하세요!"
               outlined
               hide-details
@@ -129,6 +130,7 @@
 export default {
   data () {
     return {
+      restaurantName: '',
       drawer: false,
       fixed: false,
       menuItems: [
