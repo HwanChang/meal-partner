@@ -14,7 +14,7 @@
             >
               <v-img
                 :src="require('@/static/logo.svg')"
-                max-width="150px"
+                max-width="200px"
                 max-height="40px"
               />
             </router-link>
