@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex>
         <v-card>
-          <kakao-map />
+          <google-map />
         </v-card>
       </v-flex>
     </v-layout>
@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import KakaoMap from '~/components/KakaoMap'
+import GoogleMap from '~/components/GoogleMap'
 export default {
   components: {
-    KakaoMap
+    GoogleMap
   }
 }
 </script>

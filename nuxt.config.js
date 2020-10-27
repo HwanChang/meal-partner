@@ -19,7 +19,7 @@ export default {
     ],
     script: [
       {
-        src: '//dapi.kakao.com/v2/maps/sdk.js?appkey=' + process.env.KAKAO_MAP_APIKEY + '&libraries=services,clusterer'
+        src: 'https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_MAP_APIKEY// + '&callback=initMap&libraries=&v=weekly'
       }
     ]
   },
@@ -28,7 +28,6 @@ export default {
   ],
 
   plugins: [
-    '@/plugins/kakaomap.js'
   ],
 
   components: true,
@@ -77,6 +76,7 @@ export default {
   env: {
     FIREBASE_APIKEY: process.env.FIREBASE_APIKEY,
     FIREBASE_AUTHDOMAIN: process.env.FIREBASE_AUTHDOMAIN,
-    FIREBASE_PROJECTID: process.env.FIREBASE_PROJECTID
+    FIREBASE_PROJECTID: process.env.FIREBASE_PROJECTID,
+    GOOGLE_MAP_APIKEY: process.env.GOOGLE_MAP_APIKEY
   }
 }

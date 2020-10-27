@@ -11,6 +11,7 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@google/markerclustererplus": "^5.1.3",
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
