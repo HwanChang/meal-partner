@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout row wrap>
-      <v-flex>
+      <v-flex md10 offset-md1>
         <v-card>
           <google-map />
         </v-card>
