@@ -28,6 +28,7 @@ export default {
   ],
 
   plugins: [
+    '@/plugins/vee-validate.js',
   ],
 
   components: true,
@@ -74,6 +75,9 @@ export default {
   },
 
   build: {
+    transpile: [
+      'vee-validate'
+    ]
   },
 
   env: {
