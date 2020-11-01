@@ -1,14 +1,16 @@
 <template>
-  <v-app>
+  <v-app
+    :style="{background: $vuetify.theme.currentTheme.contents}"
+  >
     <v-app-bar
       fixed
       app
       flat
-      color="white"
+      color="header"
     >
-      <v-container fluid grid-list-md mt-4>
+      <v-container fluid grid-list-md>
         <v-layout v-if="$vuetify.breakpoint.mdAndUp">
-          <v-flex row md3 lg3 xl4>
+          <v-flex row md3 lg3 xl4 pt-2>
             <router-link
               to="/"
             >
@@ -20,7 +22,7 @@
             </router-link>
             <v-spacer />
           </v-flex>
-          <v-flex md5 lg4 xl3>
+          <v-flex md5 lg4 xl3 pt-2>
             <v-text-field
               v-model="restaurantName"
               label="식당을 검색하세요!"
@@ -33,7 +35,7 @@
               @keyup.enter="searchClick"
             />
           </v-flex>
-          <v-flex md4 lg5 xl5>
+          <v-flex md4 lg5 xl5 pt-2>
             <v-btn
               v-for="(menu, i) in menuItems"
               :key="i"
@@ -44,9 +46,12 @@
               {{ menu.title }}
             </v-btn>
           </v-flex>
+          <v-flex>
+            <theme-mode-change />
+          </v-flex>
         </v-layout>
         <v-layout v-else>
-          <v-flex xs10>
+          <v-flex xs9 pt-3>
             <router-link
               to="/"
             >
@@ -61,6 +66,9 @@
             <v-btn icon>
               <v-icon>mdi-magnify</v-icon>
             </v-btn>
+          </v-flex>
+          <v-flex xs1 mr-5>
+            <theme-mode-change />
           </v-flex>
           <v-flex xs1>
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -118,16 +126,20 @@
     <v-footer
       :absolute="!fixed"
       app
-      color="white"
+      color="footer"
     >
       <v-spacer />
-      <span>&copy; {{ new Date().getFullYear() }} HwanChang</span>
+      <span style="color: white">&copy; {{ new Date().getFullYear() }} HwanChang</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import ThemeModeChange from '@/components/ThemeModeChange'
 export default {
+  components: {
+    ThemeModeChange
+  },
   data () {
     return {
       restaurantName: '',
@@ -176,7 +188,7 @@ export default {
 /*
   font 적용
 */
-.v-application{
+.v-application {
   font-family: "Noto Sans KR", AppleSDGothicNeo, "Apple SD Gothic Neo", AppleSDGothicNeo-Light, HelveticaNeue-Light, "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 .v-application .title {

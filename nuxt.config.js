@@ -49,6 +49,9 @@ export default {
       dark: false,
       themes: {
         light: {
+          header: '#FFFFFF',
+          contents: '#FFFBEA',
+          footer: '#4B4A46',
           primary: '#F5BE00',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
@@ -58,7 +61,7 @@ export default {
           success: colors.green.accent3
         },
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#F5BE00',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
