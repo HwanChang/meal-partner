@@ -19,7 +19,7 @@ export default {
     ],
     script: [
       {
-        src: 'https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_MAP_APIKEY// + '&callback=initMap&libraries=&v=weekly'
+        src: 'https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_MAP_APIKEY + '&libraries=places&v=weekly'
       }
     ]
   },
